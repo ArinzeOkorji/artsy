@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artsy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <style>
+    
+  </style>
+  <body>
+    <div class="d-flex main">
+      <div class="sidebar d-flex flex-column">
+        <ul class="flex-grow d-flex flex-column justify-content-evenly">
+            <li onclick="selectShape('freeDraw')" id="freeDraw">
+                <span class="pointer material-symbols-outlined">
+                    stylus_note
+                    </span>
+              </li>
+              <li onclick="selectShape('line')" id="lines">
+                <span class="pointer material-symbols-outlined">
+                    pen_size_1
+                    </span>
+                </li>
+              <li onclick="selectShape('circle')" id="circle">
+                <span class="pointer material-symbols-outlined">
+                    circle
+                    </span>
+            </li>
+              <li onclick="selectShape('rectangle')" id="rectangle">
+                <span class="pointer material-symbols-outlined">
+                    check_box_outline_blank
+                    </span>
+              </li>
+              <li onclick="selectShape('erase')" id="erase">
+                <span class="pointer material-symbols-outlined">
+                    ink_eraser
+                    </span>
+                </li>
+              <li onclick="selectShape('triangle')" id="triangle">
+                <span class="pointer material-symbols-outlined">
+                    change_history
+                    </span>
+              </li>
+              <li>
+                <input class="mx-auto" type="color" name="color" id="colorPicker" />
+              </li>
+        </ul>
+        
+      </div>
+
+      <div class="flex-grow canvas-container">
+        <canvas></canvas>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
