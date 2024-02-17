@@ -8,14 +8,15 @@ const httpServer = createServer(app);
 
 const corsOptions: CorsOptions = {
     origin: [
-        "http://127.0.0.1:5500"
+        "http://127.0.0.1:5500",
+        "https://artsy-board.netlify.app"
     ]
 }
 
 app.use(cors(corsOptions));
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://127.0.0.1:5500"
+        origin: ["http://127.0.0.1:5500", 'https://artsy-board.netlify.app']
     }
 });
 const port = process.env.PORT || 3000;
