@@ -309,8 +309,14 @@ window.addEventListener('load', () => {
         }
 
         canvas.addEventListener('mousedown', prepareToDraw);
+        canvas.addEventListener('touchstart', prepareToDraw);
         canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('touchmove', draw);
         canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+            socket.emit('stop-draw', true)
+        })
+        canvas.addEventListener('touchend', () => {
             isDrawing = false;
             socket.emit('stop-draw', true)
         })
