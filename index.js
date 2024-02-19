@@ -16,7 +16,8 @@ let shape = '';
 const canvasColor = '#fff';
 let color = '#000';
 let bounds = canvas.getBoundingClientRect();
-const socket = io('http://localhost:3000/' || 'https://artsy-server-wio4.onrender.com')
+// const socket = io('http://localhost:3000/' || 'https://artsy-server-wio4.onrender.com')
+const socket = io('https://artsy-server-wio4.onrender.com')
 
 
 window.addEventListener('load', () => {
