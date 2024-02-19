@@ -49,3 +49,7 @@ canvas {
   .justify-content-evenly {
     justify-content: space-evenly;
   }
+
+* {
+  user-select: none;
+}
