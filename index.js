@@ -264,6 +264,7 @@ window.addEventListener('load', () => {
         }
 
         function prepareToDraw(e) {
+            e.preventDefault();
             lineStart = true
             isDrawing = true;
             lastX = e.x - bounds.left - scrollX;
@@ -272,6 +273,7 @@ window.addEventListener('load', () => {
         }
 
         function draw(e) {
+            e.preventDefault();
             if (!isDrawing) {
                 return
             }
